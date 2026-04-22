@@ -1,5 +1,7 @@
+const API_BASE = import.meta.env.VITE_API_URL || 'https://cardekho-1-0qdk.onrender.com';
+
 export async function* streamCarRecommendations(query) {
-  const response = await fetch('/api/ask-cars', {
+  const response = await fetch(`${API_BASE}/api/ask-cars`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
