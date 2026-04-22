@@ -1,5 +1,6 @@
 # 🚗 Car Recommendation MVP
 > **Note: When running the live URL, please wait a minute as render service takes time after a period of inactivity.**
+> *Time taken - around four hours, from prompt writing to deploying on render (most time taken in fixing render deployment issues and prompt writing)*
 ## 🧠 What did I build and why? What did I deliberately cut?
 
 I built an MVP that allows users to input their car preferences such as:
