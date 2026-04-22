@@ -1,5 +1,5 @@
 # 🚗 Car Recommendation MVP
-
+> **Note: When running the live URL, please wait a minute as render service takes time after a period of inactivity.**
 ## 🧠 What did I build and why? What did I deliberately cut?
 
 I built an MVP that allows users to input their car preferences such as:
