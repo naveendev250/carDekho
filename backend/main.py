@@ -4,7 +4,6 @@ from routers.car_router import router as car_router
 from db import get_db
 import os
 from dotenv import load_dotenv
-from fastapi import Lifespan
 
 load_dotenv()
 

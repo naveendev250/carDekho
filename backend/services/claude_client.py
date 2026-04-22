@@ -17,17 +17,18 @@ class ClaudeClient:
     
     def __init__(self):
         if self._client is None:
+            self._model = os.getenv('CLAUDE_MODEL', 'claude-sonnet-4-20250514')
+
+    def _ensure_client(self) -> Anthropic:
+        if self._client is None:
             api_key = os.getenv('CLAUDE_API_KEY')
             if not api_key:
                 raise ValueError("CLAUDE_API_KEY environment variable is not set")
-            
             self._client = Anthropic(api_key=api_key)
-            self._model = os.getenv('CLAUDE_MODEL', 'claude-sonnet-4-20250514')
+        return self._client
     
     def get_client(self) -> Anthropic:
-        if self._client is None:
-            self.__init__()
-        return self._client
+        return self._ensure_client()
     
     def get_model(self) -> str:
         return self._model

@@ -7,12 +7,12 @@ import json
 
 router = APIRouter()
 
-car_handler = get_car_query_handler()
-car_service = get_car_service()
-
 
 @router.post("/ask-cars")
 async def ask_cars(query: Dict[str, Any]):
+    car_handler = get_car_query_handler()
+    car_service = get_car_service()
+
     is_valid, error_message, validated_request = car_handler.validate_request(query)
     
     if not is_valid:
