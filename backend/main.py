@@ -11,8 +11,7 @@ load_dotenv()
 app = FastAPI(
     title="CarDekho API",
     description="Car recommendation system with AI-powered explanations",
-    version="1.0.0",
-    lifespan=lifespan
+    version="1.0.0"
 )
 
 origins = os.getenv('CORS_ORIGINS', 'http://localhost:5173,http://localhost:3000').split(',')
